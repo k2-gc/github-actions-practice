@@ -1,0 +1,17 @@
+name: issues activity type
+
+on:
+  issues:
+    types:
+      - opened
+      - labeled
+    
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: sample
+        run: echo "acitivity type practice."
+
+run-name: "Issue ${{ github.event.action }} on ${{ github.event.issue.title }} by ${{ github.actor }}"
