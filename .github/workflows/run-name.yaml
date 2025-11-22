@@ -1,0 +1,21 @@
+name: practice run name
+
+on:
+  workflow_dispatch:
+    inputs:
+      env:
+        description: "Environment to deploy to"
+        type: choice
+        options:
+          - staging
+          - production
+    
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: No operation
+        run: echo "This is a no-op job."
+
+run-name: "Deployment ${{ inputs.env }} on ${{ github.ref }} by ${{ github.actor }}"
