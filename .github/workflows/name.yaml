@@ -1,0 +1,12 @@
+name: practice
+
+on:
+  workflow_dispatch:
+    
+
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - name: No operation
+        run: echo "This is a no-op job."
